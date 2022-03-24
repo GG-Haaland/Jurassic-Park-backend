@@ -6,7 +6,7 @@ const Restaurant = new Schema(
         name: {type: String, required: true},
         description: {type: String, required: true},
         image: {type: String, required: true},
-        serves_dino: {type: boolean, required: true},
+        serves_dino: {type: Boolean, required: true},
     },
 
     {timestamps: true}
