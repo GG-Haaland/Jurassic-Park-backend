@@ -1,16 +1,15 @@
 const { Schema } = require('mongoose')
 
-const Dino = new Schema(
+const Restaurant = new Schema(
     {
         id_number: {type: String, required: true},
         name: {type: String, required: true},
         description: {type: String, required: true},
         image: {type: String, required: true},
-        danger_rating: {type: String, required: true},
-        people_eaten: {type: String, required: true},
+        serves_dino: {type: boolean, required: true},
     },
 
     {timestamps: true}
 )
 
-module.exports = Dino
+module.exports = Restaurant
