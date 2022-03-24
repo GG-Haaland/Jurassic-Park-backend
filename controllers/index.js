@@ -2,7 +2,7 @@ const Dino = require('../models/dino');
 const Ride = require('../models/ride');
 const Restaurant = require('../models/restaurant');
 const Ticket = require('../models/ticket');
-// const Staff = require('../models/staff');
+const Staff = require('../models/staff');
 // const User = require('../models/user');
 
 const getAllDinos = async (req, res) => {
@@ -54,23 +54,16 @@ const getTicketPrices = async (req, res) => {
     }
 }
 
-// const getAllStaff = async (req, res) => {
-//     try {
-//         const staffing = await Staff.find()
-//         return res.status(200).json({ staffing })
-//     } catch (error) {
-//         return res.status(500).send(error.message);
-//     }
-// }
+const getAllStaff = async (req, res) => {
+    try {
+        const staffing = await Staff.find()
+        return res.status(200).json({ staffing })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
 
-// const getAllStaff = async (req, res) => {
-//     try {
-//         const staffing = await Staff.find()
-//         return res.status(200).json({ staffing })
-//     } catch (error) {
-//         return res.status(500).send(error.message);
-//     }
-// }
+
 
 // const createUser = async (req, res) => {
 //     try {
@@ -90,6 +83,6 @@ module.exports = {
     getAllRides,
     getAllRestaurants,
     getTicketPrices,
-    // getAllStaff,
+    getAllStaff,
     // createUser
 }
