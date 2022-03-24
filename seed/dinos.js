@@ -1,11 +1,11 @@
 const db = require('../db')
-const { Dino } = require('../models')
+const Dino = require('../models/dino')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
     const dinos = [
-        { 
+    { 
     id_number: '01',
     name: 'Indominus rex', 
 

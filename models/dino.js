@@ -1,4 +1,6 @@
-const { Schema } = require('mongoose')
+const mongoose = require('mongoose');
+const Schema  = mongoose.Schema
+
 
 const Dino = new Schema(
     {
@@ -13,4 +15,4 @@ const Dino = new Schema(
     {timestamps: true}
 )
 
-module.exports = Dino
+module.exports = mongoose.model('dinos', Dino)
