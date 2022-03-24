@@ -14,6 +14,8 @@ router.get('/restaurants', controllers.getAllRestaurants)
 
 router.get('/tickets', controllers.getTicketPrices)
 
+router.get('/staff', controllers.getAllStaff)
+
 // router.post('/users', controllers.createUser)
 
 module.exports = router;
