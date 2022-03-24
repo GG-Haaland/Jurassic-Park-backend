@@ -1,6 +1,8 @@
 const Dino = require('../models/dino');
 const Ride = require('../models/ride');
 const Restaurant = require('../models/restaurant');
+const Ticket = require('../models/ticket');
+const Staff = require('../models/staff');
 
 const getAllDinos = async (req, res) => {
     try {
@@ -42,9 +44,29 @@ const getAllRestaurants = async (req, res) => {
     }
 }
 
+const getTicketPrices = async (req, res) => {
+    try {
+        const tickets = await Ticket.find()
+        return res.status(200).json({ tickets })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+// const getAllStaff = async (req, res) => {
+//     try {
+//         const staffing = await Staff.find()
+//         return res.status(200).json({ staffing })
+//     } catch (error) {
+//         return res.status(500).send(error.message);
+//     }
+// }
+
 module.exports = {
     getAllDinos,
     getDinoById,
     getAllRides,
-    getAllRestaurants
+    getAllRestaurants,
+    getTicketPrices,
+    // getAllStaff
 }
