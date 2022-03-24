@@ -1,7 +1,7 @@
-const db = require('mongoose')
+const db = require('../db')
 const { Restaurant } = require('../models')
 
-db.on('error', console.error.bind(console,'MongoDB connection error:'))
+db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
     const restaurants = [

@@ -3,7 +3,7 @@ const { Schema } = require('mongoose')
 const Ride = new Schema(
     {
         id_number: {type: String, required: true},
-        name: {type: String, requied: true},
+        name: {type: String, required: true},
         description: {type: String, required: true},
         url: {type: String, required: true},
         min_height: {type: Boolean, required: true},
