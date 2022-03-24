@@ -16,7 +16,7 @@ const main = async () => {
     danger_rating: '5',
     people_eaten: 'True'
 },
-      
+    
 { 
     id_number: '02',
     name: 'Tyrannosaurus Rex ', 
