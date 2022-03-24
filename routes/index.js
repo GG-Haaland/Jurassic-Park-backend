@@ -12,4 +12,6 @@ router.get('/rides', controllers.getAllRides)
 
 router.get('/restaurants', controllers.getAllRestaurants)
 
+router.get('/tickets', controllers.getTicketPrices)
+
 module.exports = router;
